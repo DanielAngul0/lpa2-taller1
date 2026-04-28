@@ -3,6 +3,11 @@
 ![commits](https://badgen.net/github/commits/UR-CC/lpa2-taller1?icon=github) 
 ![last_commit](https://img.shields.io/github/last-commit/UR-CC/lpa2-taller1)
 
+## Autor
+### Estudiante: Daniel Andres Angulo Perez
+
+## [@DanielAngul0](https://github.com/DanielAngul0)
+
 ## Objetivos
 
 - Aplicar **pruebas unitarias** con `pytest`
