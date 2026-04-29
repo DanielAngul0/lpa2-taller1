@@ -203,3 +203,5 @@ poetry.toml
 # LSP config files
 pyrightconfig.json
 
+# Diagramas y reportes de arquitectura
+Diagramas_y_reportes_de_arquitectura/
