@@ -1,12 +1,12 @@
 import pytest
 from unittest.mock import Mock, patch
-from src.services.tienda import Tienda
+from src.services.tienda import TiendaMuebles
 from src.models.concretos.silla import Silla
 
 class TestTienda:
     @pytest.fixture
     def tienda_vacia(self):
-        return Tienda()
+        return TiendaMuebles()
     
     @pytest.fixture
     def silla_mock(self):

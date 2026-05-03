@@ -3,7 +3,7 @@ Clase abstracta para muebles de almacenamiento.
 """
 
 from abc import ABC, abstractmethod
-from models.mueble import Mueble
+from src.models.mueble import Mueble
 
 
 class Almacenamiento(Mueble, ABC):
