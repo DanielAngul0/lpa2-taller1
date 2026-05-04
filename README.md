@@ -582,10 +582,11 @@ lpa2-taller1/
 │       └── menu.py
 └── tests/
     ├── __init__.py
+    ├── test_main.py
+    ├── conftest.py
     ├── fixtures/
     ├── integration/
     └── unit/
-        ├── conftest.py
         ├── models/
         │   ├── __init__.py
         │   ├── categorias/
