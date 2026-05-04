@@ -37,10 +37,10 @@ class SofaCama(Sofa, Cama):
         Constructor del sofá-cama.
 
         Args:
-            mecanismo_conversion: Tipo de mecanismo de conversión (plegable, extensible, etc.)
+            mecanismo_conversion: Tipo de mecanismo de conversión
+                (plegable, extensible, etc.)
             Otros argumentos se pasan a las clases padre
         """
-        # Usar super() para llamar al constructor de Sofa (primer padre en MRO)
         Sofa.__init__(
             self,
             nombre,
@@ -51,10 +51,9 @@ class SofaCama(Sofa, Cama):
             True,
             material_tapizado,
         )
-        # Inicializar atributos específicos de cama
+
         self._tamaño = tamaño_cama
         self._incluye_colchon = incluye_colchon
-        # Atributos específicos del sofá-cama
         self._mecanismo_conversion = mecanismo_conversion
         self._modo_actual = "sofa"
 
@@ -63,10 +62,8 @@ class SofaCama(Sofa, Cama):
         Calcula el precio final del sofá cama.
         Combina características de ambas clases padre.
         """
-        # Precio base del sofá usando super() para resolución MRO
         precio_sofa = super().calcular_precio()
 
-        # Agregar costos específicos de cama
         if self._tamaño == "matrimonial":
             precio_sofa += 300
         elif self._tamaño == "queen":
@@ -77,7 +74,6 @@ class SofaCama(Sofa, Cama):
         if self.incluye_colchon:
             precio_sofa += 250
 
-        # Costo del mecanismo de conversión
         if self._mecanismo_conversion == "hidraulico":
             precio_sofa += 150
         elif self._mecanismo_conversion == "electrico":
@@ -95,7 +91,6 @@ class SofaCama(Sofa, Cama):
         """Getter para el modo actual (sofa o cama)."""
         return self._modo_actual
 
-    # Redefinir tamaño para compatibilidad con ambas clases
     @property
     def tamaño(self) -> str:
         """Getter para tamaño (compatible con clase Cama)."""
@@ -133,7 +128,6 @@ class SofaCama(Sofa, Cama):
 
         self._modo_actual = "sofa"
         return f"Cama convertida a sofá usando mecanismo {self.mecanismo_conversion}"
-        pass
 
     def obtener_descripcion(self) -> str:
         """
@@ -159,22 +153,18 @@ class SofaCama(Sofa, Cama):
         Returns:
             dict: Capacidades en ambos modos
         """
-        capacidades = {
+        return {
             "como_sofa": self.capacidad_personas,
-            "como_cama": 2
-            if self.tamaño_cama in ["matrimonial", "queen", "king"]
-            else 1,
+            "como_cama": 2 if self.tamaño_cama in ["matrimonial", "queen", "king"] else 1,
         }
-        return capacidades
 
-    # TODO: Implementar método para verificar compatibilidad de modo
-    # def puede_usar_como_cama(self) -> bool:
-    #     """Verifica si actualmente puede usarse como cama."""
-    #     return self._modo_actual == "cama"
+    def puede_usar_como_cama(self) -> bool:
+        """Verifica si actualmente puede usarse como cama."""
+        return self._modo_actual == "cama"
 
-    # def puede_usar_como_sofa(self) -> bool:
-    #     """Verifica si actualmente puede usarse como sofá."""
-    #     return self._modo_actual == "sofa"
+    def puede_usar_como_sofa(self) -> bool:
+        """Verifica si actualmente puede usarse como sofá."""
+        return self._modo_actual == "sofa"
 
     def __str__(self) -> str:
         """
