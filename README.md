@@ -535,3 +535,80 @@ El estudiante debe actualizar su repositorio personal con:
 
 **Nota**: repo [solución al proyecto Muebles](https://github.com/axlcraft/lpa1-taller-poo).
 
+
+## Estructura del Proyecto LPA2 Taller1: 
+
+```
+lpa2-taller1/
+├── .coveragerc
+├── README.md
+├── .gitignore
+├── pytest.ini
+├── requirements.txt
+├── refs/
+|   └── guia_pytest.md
+├── src/
+│   ├── __init__.py
+│   ├── main.py
+│   ├── models/
+│   │   ├── __init__.py
+│   │   ├── categorias/
+│   │   │   ├── __init__.py
+│   │   │   ├── almacenamiento.py
+│   │   │   ├── asientos.py
+│   │   │   └── superficies.py
+│   │   ├── composicion/
+│   │   │   ├── __init__.py
+│   │   │   └── comedor.py
+│   │   ├── concretos/
+│   │   │   ├── __init__.py
+│   │   │   ├── armario.py
+│   │   │   ├── cajonera.py
+│   │   │   ├── cama.py
+│   │   │   ├── comedor.py
+│   │   │   ├── escritorio.py
+│   │   │   ├── mesa.py
+│   │   │   ├── silla.py
+│   │   │   ├── sillon.py
+│   │   │   ├── sofa.py
+│   │   │   └── sofacama.py
+│   │   └── mueble.py
+│   ├── services/
+│   │   ├── __init__.py
+│   │   ├── catalogo.py
+│   │   └── tienda.py
+│   └── ui/
+│       ├── __init__.py
+│       └── menu.py
+└── tests/
+    ├── __init__.py
+    ├── fixtures/
+    ├── integration/
+    └── unit/
+        ├── conftest.py
+        ├── models/
+        │   ├── __init__.py
+        │   ├── categorias/
+        │   │   ├── test_almacenamiento.py
+        │   │   ├── test_asientos.py
+        │   │   └── test_superficies.py
+        │   ├── composicion/
+        │   │   ├── __init__.py
+        │   │   └── test_comedor.py
+        │   ├── concretos/
+        │   │   ├── __init__.py
+        │   │   ├── test_armario.py
+        │   │   ├── test_cajonera.py
+        │   │   ├── test_cama.py
+        │   │   ├── test_comedor.py
+        │   │   ├── test_escritorio.py
+        │   │   ├── test_mesa.py
+        │   │   ├── test_silla.py
+        │   │   ├── test_sillon.py
+        │   │   ├── test_sofa.py
+        │   │   └── test_sofacama.py
+        │   └── test_mueble.py
+        └── services/
+            ├── __init__.py
+            └── test_tienda.py
+```
