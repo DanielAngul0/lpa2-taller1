@@ -584,8 +584,6 @@ lpa2-taller1/
     ├── __init__.py
     ├── test_main.py
     ├── conftest.py
-    ├── fixtures/
-    ├── integration/
     └── unit/
         ├── models/
         │   ├── __init__.py
@@ -609,7 +607,11 @@ lpa2-taller1/
         │   │   ├── test_sofa.py
         │   │   └── test_sofacama.py
         │   └── test_mueble.py
-        └── services/
+        ├── services/
+        |   ├── __init__.py
+        |   ├── test_catalogo.py
+        |   └── test_tienda.py
+        └── ui/
             ├── __init__.py
-            └── test_tienda.py
+            └── test_menu.py
 ```
