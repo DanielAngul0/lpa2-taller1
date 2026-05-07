@@ -615,3 +615,10 @@ lpa2-taller1/
             ├── __init__.py
             └── test_menu.py
 ```
+
+# 🚀 Ejecución
+Para ejecutar nuestra tienda de muebles se debe ejecutar desde una terminal:
+```
+python3 -m src.main
+```
+
