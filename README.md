@@ -617,8 +617,17 @@ lpa2-taller1/
 ```
 
 # 🚀 Ejecución
+Para ejecutar las pruebas unitarias, digitar en la terminal desde la raiz:
+```
+pytest -v
+```
+---
 Para ejecutar nuestra tienda de muebles se debe ejecutar desde una terminal:
 ```
 python3 -m src.main
 ```
+
+Cuando aparezca el menú principal, pulsa **Enter** y sigue las instrucciones mostradas en pantalla.
+
+Para desplazarte por las distintas opciones del menú, introduce el número correspondiente a la acción que deseas realizar: 1️ 2️ 3️ 4️ 5️ 6️ 7️ 8️ 9️ 0️⃣ 
 
